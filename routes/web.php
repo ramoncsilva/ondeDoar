@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/places', 'PlaceController@getAll');
+Route::post('/places', 'PlaceController@store');
+Route::put('/places/{id}', 'PlaceController@update');
+
 Route::get('/', function () {
     return view('welcome');
 });
