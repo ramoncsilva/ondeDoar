@@ -15,16 +15,16 @@ class PlaceController extends Migration
     {
         Schema::create('places', function (Blueprint $table) {
             $table->id();
-            $table->string('placeName')->unique();
+            $table->string('placeName')->nullable();
             $table->string('street');
             $table->string('number');
-            $table->string('additional');
-            $table->string('neighborhood');
-            $table->string('postalCode');
-            $table->string('latitude');
-            $table->string('longitude');
-            $table->string('addtionalInfos');
-            $table->string('typeOfDonations');
+            $table->string('additional')->nullable();
+            $table->string('neighborhood')->nullable();
+            $table->string('postalCode')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
+            $table->string('addtionalInfos')->nullable();
+            $table->string('typeOfDonations')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
